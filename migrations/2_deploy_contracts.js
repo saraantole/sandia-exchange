@@ -1,0 +1,14 @@
+/* eslint-disable no-undef */
+const Token = artifacts.require("Token");
+const Exchange = artifacts.require("Exchange");
+
+module.exports = async function (deployer) {
+  await deployer.deploy(Token);
+
+  const accounts = await web3.eth.getAccounts()
+
+  const feeAccount = accounts[0]
+  const feePercentage = 10
+
+  await deployer.deploy(Exchange, feeAccount, feePercentage); // contract, arguments for constructor
+};
