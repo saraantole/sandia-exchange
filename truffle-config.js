@@ -16,12 +16,10 @@ module.exports = {
       network_id: "*",       // Any network (default: none)
     },
     kovan: {
-      provider: function() {
-        return new HDWalletProvider(
-          privateKeys.split(','), // array of private keys
-          `https://kovan.infura.io/v3/${process.env.INFURA_API_KEY}` // url to an Ethereum Node
-        )
-      },
+      provider: () => new HDWalletProvider(
+        privateKeys.split(','), // array of private keys
+        `https://kovan.infura.io/v3/${process.env.INFURA_API_KEY}` // url to an Ethereum Node
+      ),
       gas: 5000000,
       gasPrice: 25000000000,
       network_id: 42
