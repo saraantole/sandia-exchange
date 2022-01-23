@@ -25,13 +25,13 @@ class MyTransactions extends Component {
                                 {showMyFilledOrders ?
                                     <tbody>
                                         {
-                                            myFilledOrders?.map(order => (
+                                            myFilledOrders.map(order => 
                                                 <tr key={order.id}>
                                                     <td className='text-muted'>{order.formattedTimestamp}</td>
                                                     <td className={`text-${order.orderTypeClass}`}>{order.orderSign}{order.tokenAmount}</td>
                                                     <td className={`text-${order.orderTypeClass}`}>{order.tokenPrice}</td>
                                                 </tr>
-                                            ))
+                                            )
                                         }
                                     </tbody>
                                     : <Spinner type='table' />
