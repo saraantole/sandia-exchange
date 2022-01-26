@@ -9,4 +9,4 @@ An order-book-type decentralized exchange to trade ETH-SND (fictitious Sandia to
 
 # Demo Link
 
-To see a live demo, click [here] (https://sandia-exchange.vercel.app/). Make sure you're on the Kovan testnet!
+To see a live demo, click [here](https://sandia-exchange.vercel.app/). Make sure you're on the Kovan testnet!
